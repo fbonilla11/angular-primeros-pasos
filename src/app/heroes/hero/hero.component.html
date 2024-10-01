@@ -1,0 +1,36 @@
+<hr>
+<h1>{{ capitalizedName }}</h1>
+<div class="container-fluid">
+  <dl class="d-flex flex-column justify-content-center">
+    <td>Nombre:</td>
+    <dd>{{ name }}</dd>
+
+    <td>Edad:</td>
+    <dd>{{ age }}</dd>
+
+    <td>Método:</td>
+    <dd>{{ getHeroDescription() }}</dd>
+
+    <td>Capitalizado:</td>
+    <dd>{{ capitalizedName }}</dd>
+  </dl>
+</div>
+
+<div class="container-fluid p-3">
+  <button
+    *ngIf="name === 'spiderman'"
+    (click)="changeName('IronMan')"
+    class="btn btn-primary mx-2"
+  >
+    Cambiar nombre
+  </button>
+  <button
+    *ngIf="age !== 45"
+    (click)="changeAge(45)"
+    class="btn btn-primary"
+  >
+    Cambiar edad
+  </button>
+  <button (click)="resetForm()" class="btn btn-primary mx-2">Reset</button>
+</div>
+<hr>
