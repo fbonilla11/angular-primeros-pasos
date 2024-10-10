@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Character } from '../interfaces/character.interface';
 import { v4 as uuid } from 'uuid';
 
+//Clase que contiene toda la lógica de negocio
+
 @Injectable({ providedIn: 'root' })
 export class DbzService {
   characters: Character[] = [
@@ -32,6 +34,8 @@ export class DbzService {
   }
 
   deleteCharacter(index: string): void {
-    this.characters = this.characters.filter(character => character.id !== index);
+    this.characters = this.characters.filter(
+      (character) => character.id !== index
+    );
   }
 }

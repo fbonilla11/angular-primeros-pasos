@@ -1,6 +1,6 @@
 <h1 class="mt-3 text-center">DBZ Main Page</h1>
 <hr />
 <div class="row">
-  <div class="col"><dbz-list (characterIndex)="dbzService.deleteCharacter($event)" [characterList]="dbzService.characters"></dbz-list></div>
-  <div class="col"><dbz-form (onNewCharacter)="dbzService.onNewCharacter($event)"></dbz-form></div>
+  <div class="col"><dbz-list (characterIndex)="onDeleteCharacter($event)" [characterList]="getCharacters"></dbz-list></div>
+  <div class="col"><dbz-form (onNewCharacter)="onNewCharacter($event)"></dbz-form></div>
 </div>
